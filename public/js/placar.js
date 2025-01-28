@@ -9,6 +9,15 @@ function inserePlacar(){
     linha.find(".botao-remover").click(removeLinha);
 
     corpoTabela.append(linha);
+    $(".placar").slideDown(500);
+    scrollPlacar()
+}
+
+function scrollPlacar(){
+    var posicaoPlacar = $(".placar").offset().top; //offset mostra as posições do objeto
+    $("html, body").animate({
+        scrollTop: posicaoPlacar+"px"
+    },1000);
 }
 
 function novaLinha(usuario, palavras){
@@ -19,7 +28,6 @@ function novaLinha(usuario, palavras){
 
     var link = $("<a>").addClass("botao-remover").attr("href","#");
     var icone = $("<i>").addClass("small").addClass("material-icons").text("delete");
-
     link.append(icone);
 
     colunaRemover.append(link);
@@ -42,5 +50,5 @@ function removeLinha(){
 }
 
 function mostraPlacar(){
-    $(".placar").slideToggle(1000);
+    $(".placar").stop().slideToggle(1000);
 }

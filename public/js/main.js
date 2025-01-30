@@ -8,6 +8,10 @@ $(function(){
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
     atualizaPlacar();
+    $("#usuarios").selectize({
+        create: true,
+        sortField: 'text'
+    });
 
 })
 
@@ -73,7 +77,6 @@ function finalizaJogo(){
     campo.attr("disabled",true);
     campo.toggleClass("campo-desativado");
     inserePlacar();
-    // campo.css("background-color", "lightgray");
 
 }
 

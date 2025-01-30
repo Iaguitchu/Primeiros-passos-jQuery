@@ -53,3 +53,17 @@
 #botao-sync{
  float: right;
 }
+
+.select-usuarios{
+    display: inline-block;
+}
+
+#usuarios{
+    display: block;
+}
+
+.single{
+    width: 150px;
+    text-align: center;
+    /* vertical-align: center; */
+}

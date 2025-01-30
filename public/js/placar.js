@@ -3,7 +3,7 @@ $("#botao-sync").click(sincronizaPlacar);
 
 function inserePlacar(){
     var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Iago"
+    var usuario = $('#usuarios').val()
     var numPlavras = $("#contador-palavras").text();
 
     var linha = novaLinha(usuario, numPlavras);
